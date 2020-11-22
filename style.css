@@ -1,0 +1,153 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  display: block;
+  /* Disable mouse selection on this page */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.container {
+  width: 90%;
+  margin: 0px auto; /* 5% for left margin and 5% for right margin */
+  height: 100%;
+  padding: 0px;
+  border: none;
+  display: block;
+  box-sizing: content-box;
+}
+/*------ Header ----------------------------*/
+header {
+  width: 100%;
+  height: 8%;
+  background-color: rgb(129, 106, 2);
+  display: flex;
+  align-items: center;
+  font-size: calc(0.8vh + 0.8vw);
+}
+
+header > h1 {
+  margin: 0px 0px;
+  padding: 0px 0px 0px 1vw;
+  color: white;
+}
+/*------ Footer ----------------------------*/
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 90%;
+  height: 6%;
+  background-color: rgb(90, 74, 1);
+  display: flex;
+  align-items: center;
+  font-size: calc(1vh + 0.6vw);
+}
+
+footer > p {
+  margin: 0px 0px;
+  padding: 0px 0px 0px 1vw;
+  color: white;
+}
+/*------ Main ----------------------------*/
+main {
+  width: 100%;
+  height: 86%;
+}
+/*--- NAV ------------*/
+.nav-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px;
+  padding: 1vh 0px 1vh 1vw;
+  font-size: calc(1vh + 10px);
+  background-color: rgba(251, 205, 0, 0.335);
+}
+
+#button_CreateDeck {
+  font-size: calc(1vh + 8px);
+  padding: 1vh 0px;
+  margin-right: 1vw;
+  width: 10vw;
+  cursor: pointer;
+}
+
+#button_ShuffleCards {
+  font-size: calc(1vh + 8px);
+  padding: 1vh 0px;
+  margin-right: 1vw;
+  width: 10vw;
+  display: none;
+  cursor: pointer;
+}
+
+#option_ShowHide {
+  display: none;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+#label_ShowHide {
+  display: none;
+}
+/*---- Status --------------*/
+.status-div {
+  font-size: calc(1vh + 12px);
+  padding: 0px 0px;
+  margin: 0px;
+}
+
+#status_p {
+  padding: 5px 1vw;
+  margin: 0px;
+}
+/*----- Deck -------------*/
+
+#div_deck {
+  display: flex;
+  width: 98%;
+  height: 85%;
+  padding: 1vh 0px 0px 0px;
+  margin: 0px auto;
+  box-sizing: border-box;
+}
+
+#table_deck {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: 85%;
+  box-sizing: border-box;
+}
+
+.image-card {
+  width: 80%;
+  cursor: pointer;
+  transform: scale3d(1, 1, 1);
+  padding: 1px 1px;
+}
+
+.image-card:hover {
+  transform: scale3d(1.1, 1.1, 1.1);
+  transition: 0.3s;
+  border: none;
+  box-shadow: 2px 2px 5px #777676ce;
+  padding: 0px 0px;
+}
+
+/* (Optional) Apply a "closed-hand" cursor during drag operation. */
+.image-card:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+

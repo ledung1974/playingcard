@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Playing cards - HTML-CSS-JavaScript</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module">
+        import { createDeck, shuffleCards, flipCard, dragStart, dragging, allowDrop, drop, endDrag} from "./script.js";
+        window.createDeck = createDeck;//Module must assign to window function 
+        window.shuffleCards = shuffleCards;
+        window.flipCard = flipCard;
+        window.dragStart = dragStart;
+        window.dragging = dragging;
+        window.allowDrop = allowDrop;
+        window.drop = drop;
+        window.endDrag = endDrag;  
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>PLAYING CARDS</h1>
+        </header>
+        <main>
+            <div class="nav-div">
+                <button id="button_CreateDeck" type="button" onclick="createDeck()">Create Deck</button>
+                <button id="button_ShuffleCards" type="button" onclick="shuffleCards()">Shuffle Cards</button>
+                <input id="option_ShowHide" type="checkbox" unchecked>
+                <label id="label_ShowHide">Shuffle and show all cards</label>
+            </div>
+            <div class="status-div">
+                <p id="status_p">Deck is now empty !</p>
+            </div>
+            <div id="div_deck">
+                <!-- Here is the place the id="table_deck" will be created-->
+            </div>
+        </main>
+        <footer>
+            <p>Practice HTML + CSS + JavaScript - Copyright by Le Dung</p>
+        </footer>
+    </div>
+</body>
+
+</html>
